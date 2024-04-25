@@ -1,5 +1,5 @@
 -- Connect to the database which automatically creates it if it does not exist
-\connect dependex_db;
+\connect dependex-db;
 
 -- Create a table to store information about each program
 CREATE TABLE public.program (

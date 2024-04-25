@@ -1,4 +1,4 @@
-\connect dependex_db;
+\connect dependex-db;
 
 -- Insert some dummy data into the program table
 INSERT INTO public.program (name, version, release_date) VALUES
