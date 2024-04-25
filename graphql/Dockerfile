@@ -1,4 +1,5 @@
 FROM node:alpine
+# https://www.graphile.org/postgraphile/usage-cli/
 LABEL description="Instant high-performance GraphQL API for your PostgreSQL database https://github.com/graphile/postgraphile"
 
 # Install PostGraphile and PostGraphile connection filter plugin
@@ -11,5 +12,5 @@ RUN cd /tmp/custom-plugin && npm pack
 RUN npm install -g /tmp/custom-plugin/custom-plugin-0.0.1.tgz
 RUN rm -rf /tmp/custom-plugin
 
-EXPOSE 5000
+EXPOSE 5433
 ENTRYPOINT ["postgraphile", "-n", "0.0.0.0"]

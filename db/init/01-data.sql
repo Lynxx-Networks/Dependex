@@ -1,11 +1,21 @@
-\connect postgresdb;
+\connect dependex_db;
 
-INSERT INTO your_schema.parent_table (name, description) VALUES
-('Parent name 1', 'Parent description 1'),
-('Parent name 2', 'Parent description 2'),
-('Parent name 3', 'Parent description 3');
+-- Insert some dummy data into the program table
+INSERT INTO public.program (name, version, release_date) VALUES
+('Program A', '1.0', '2021-01-15'),
+('Program B', '2.3', '2021-05-22'),
+('Program C', '0.9', '2022-12-01');
 
-INSERT INTO your_schema.child_table (name, description, parent_table_id) VALUES
-('Child name 1', 'Child description 1', 1),
-('Child name 2', 'Child description 2', 2),
-('Child name 3', 'Child description 3', 3);
+-- Insert some dummy data into the dependency table
+INSERT INTO public.dependency (name, version) VALUES
+('Library X', '1.0'),
+('Library Y', '2.2'),
+('Library Z', '3.5');
+
+-- Insert some dummy data linking programs to dependencies
+INSERT INTO public.program_dependency (program_id, dependency_id) VALUES
+(1, 1), -- Program A requires Library X
+(1, 2), -- Program A also requires Library Y
+(2, 3), -- Program B requires Library Z
+(3, 1), -- Program C requires Library X
+(3, 3); -- Program C also requires Library Z

@@ -1,0 +1,48 @@
+/* Reset some basic elements */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a basic style */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+#data-viewer {
+    margin-bottom: 20px;
+}
+
+#programs-container {
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Class helpers */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}

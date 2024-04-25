@@ -1,0 +1,61 @@
+version: "3.3"
+services:
+    frontend:
+        container_name: dependex-frontend
+        restart: always
+        image: dependex-frontend
+        build:
+            context: ./frontend
+        networks:
+            - network
+        ports:
+            - 3090:3090
+        entrypoint: npm start
+
+    db:
+        container_name: dependex-db
+        restart: always
+        image: dependex-db
+        build:
+            context: ./db
+        volumes:
+            - db:/var/lib/postgresql/data
+        env_file:
+            - ./.env
+        networks:
+            - network
+        ports:
+            - 5432:5432
+
+    graphql:
+        container_name: dependex-graphql
+        restart: always
+        image: dependex-graphql
+        build:
+            context: ./graphql
+        env_file:
+            - ./.env
+        depends_on:
+            - db
+        networks:
+            - network
+        ports:
+            - 5433:5433
+        command:
+            [
+                "--connection",
+                "${DATABASE_URL}",
+                "--port",
+                "5433",
+                "--schema",
+                "public",
+                "--append-plugins",
+                "postgraphile-plugin-connection-filter,custom-plugin",
+                "--cors",
+            ]
+
+networks:
+    network:
+
+volumes:
+    db:
