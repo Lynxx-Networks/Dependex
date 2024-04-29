@@ -1,5 +1,34 @@
 # Dependex
-Dependency mapping made easy
+<img src="https://github.com/DavidTesar/Dependex/assets/73195563/3c4aa444-2721-4c46-ab24-61e9ad09f20a" width="500" height="500" align="left">
 
 
-![DALL·E 2024-04-18 07 56 39 - Logo design for a software program called Dependex  This logo should incorporate a futuristic network motif with interconnected circles and lines to r](https://github.com/DavidTesar/Dependex/assets/73195563/3c4aa444-2721-4c46-ab24-61e9ad09f20a)
+Dependex is a version tracking system for software programs and their dependencies.
+
+
+## Description
+Dependex is designed to help maintain and visualize the relationships between software programs and their dependencies. Using a PostgreSQL database to store information about individual programs, dependencies, and their associations, Dependex provides an API built on a GraphQL server, allowing users to create, read, and manage program data effectively.
+
+## Getting Started
+
+### Dependencies
+
+- PostgreSQL
+- GraphQL
+- PostGraphile
+
+-----------------------------
+### Installing
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/dependex.git](https://github.com/DavidTesar/Dependex.git
+   ```
+2. Run docker compose
+  ```sh
+  docker-compose build
+  docker-compose up
+  ```
+3. Navigate to:
+     - *\graphiql for manual query execution
+     - *\graphql for API endpoint
+     - *\3*** for frontend 
