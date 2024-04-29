@@ -1,17 +1,17 @@
 const { makeWrapResolversPlugin } = require("graphile-utils");
 
-// Create custom wrapper for resolver createUser
-const createUserResolverWrapper = () => {
+// Create custom wrapper for resolver createProgram
+const createProgramResolverWrapper = () => {
     return async (resolve, source, args, context, resolveInfo) => {
-        // You can do something before the resolver executes
-        console.info("Hello world!");
+        // Log before the resolver executes
+        console.info("Creating a new program...");
         console.info(args);
 
-        // Let resolver execute against database
+        // Execute the resolver against the database
         const result = await resolve();
 
-        // You can do something after the resolver executes
-        console.info("Hello again!");
+        // Log after the resolver executes
+        console.info("Program created:");
         console.info(result);
 
         return result;
@@ -21,6 +21,7 @@ const createUserResolverWrapper = () => {
 // Register custom resolvers
 module.exports = makeWrapResolversPlugin({
     Mutation: {
-        createUser: createUserResolverWrapper()
+        // Assuming createProgram is the correct mutation name in your GraphQL schema
+        createProgram: createProgramResolverWrapper()
     }
 });
