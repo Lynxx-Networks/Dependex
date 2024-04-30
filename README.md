@@ -19,7 +19,7 @@ Dependex is designed to help maintain and visualize the relationships between so
 
 -----------------------------
 
-## Dependencies
+Dependencies
 
 -----------------------------
 
