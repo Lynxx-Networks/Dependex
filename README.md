@@ -15,11 +15,11 @@ Description
 
 Dependex is designed to help maintain and visualize the relationships between software programs and their dependencies. Using a PostgreSQL database to store information about individual programs, dependencies, and their associations, Dependex provides an API built on a GraphQL server, allowing users to create, read, and manage program data effectively.
 
-Getting Started
+## Getting Started
 
 -----------------------------
 
-Dependencies
+## Dependencies
 
 -----------------------------
 
@@ -27,6 +27,7 @@ Dependencies
 - GraphQL
 - PostGraphile
 
+Part of docker-compose
 -----------------------------
 ### Details
 Dependex is fully dockerized/containerized thus upon running the containers, all services should be accessible.
