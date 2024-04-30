@@ -1,5 +1,5 @@
 # Dependex
-<img src="https://github.com/DavidTesar/Dependex/assets/73195563/3c4aa444-2721-4c46-ab24-61e9ad09f20a" width="500" height="500" align="left">
+<img src="https://github.com/DavidTesar/Dependex/assets/73195563/3c4aa444-2721-4c46-ab24-61e9ad09f20a" width="400" height="400" align="left">
 
 
 Dependex is a version tracking system for software programs and their dependencies.
