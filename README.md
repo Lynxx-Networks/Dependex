@@ -2,7 +2,7 @@
 
 -----------------------------
 
-<img src="https://github.com/DavidTesar/Dependex/assets/73195563/3c4aa444-2721-4c46-ab24-61e9ad09f20a" width="300" height="300" align="left">
+<img src="https://github.com/DavidTesar/Dependex/assets/73195563/3c4aa444-2721-4c46-ab24-61e9ad09f20a" width="325" height="325" align="left">
 
 
 Dependex is a version tracking system for software programs and their dependencies.
