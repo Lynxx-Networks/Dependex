@@ -27,8 +27,10 @@ Dependex is designed to help maintain and visualize the relationships between so
 - GraphQL
 - PostGraphile
 
-Part of docker-compose
+(Use docker - recommended)
+
 -----------------------------
+
 ### Details
 Dependex is fully dockerized/containerized thus upon running the containers, all services should be accessible.
 
